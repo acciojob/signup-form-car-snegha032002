@@ -8,62 +8,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Form</title>
 </head>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 1em;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
-	<h2>Signup Form</h2>
+	<h2>Dog Adoption Application</h2>
 
-    <form action="#" method="post">
-        <!-- Name Field -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Name" required><br><br>
+<form action="#" method="post">
+    <!-- Name Field -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required><br>
 
-        <!-- Email Field -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+    <!-- Phone Number Field -->
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" placeholder="Phone Number" required><br>
 
-        <!-- Gender Field -->
-        <label>Gender:</label><br>
-        <input type="radio" id="gender_m" name="gender" value="male">
-        <label for="gender_m">Male</label><br>
-        <input type="radio" id="gender_f" name="gender" value="female">
-        <label for="gender_f">Female</label><br><br>
+    <!-- Address Field -->
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" placeholder="Address" required><br>
 
-        <!-- Car Brands Field -->
-        <label for="cars">Car Brands:</label>
-        <select id="cars" name="cars" required>
-            <option value="">--Please choose an option--</option>
-            <option value="toyota">Toyota</option>
-            <option value="ford">Ford</option>
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-        </select><br><br>
+    <!-- Checkbox for Lived with a Dog Before -->
+    <label for="dog_lived">Have you ever lived with a Dog before?</label>
+    <input type="checkbox" id="dog_lived" name="dog_lived"><br>
 
-        <!-- Age Field -->
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" placeholder="Age" required><br><br>
+    <!-- Multi-select for Preferred Breeds -->
+    <label for="breeds">Please select your preferred breeds:</label>
+    <select id="breeds" name="breeds[]" multiple required>
+        <option value="labrador">Labrador</option>
+        <option value="golden_retriever">Golden Retriever</option>
+        <option value="bulldog">Bulldog</option>
+        <option value="poodle">Poodle</option>
+        <option value="germanshepherd">German Shepherd</option>
+    </select><br>
 
-        <!-- Date of Birth Field -->
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required><br><br>
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+</form>
 
-        <!-- Phone Number Field -->
-        <label for="tel">Phone Number:</label>
-        <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx"><br><br>
-
-        <!-- Password Field -->
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Password" required><br><br>
-
-        <!-- Terms of Service Checkbox -->
-        <label for="tos">I agree to the TOS:</label>
-        <input type="checkbox" id="tos" name="tos" required><br><br>
-
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
-    </form>
 
     <script type="text/javascript" src="./script.js">
 </script>
